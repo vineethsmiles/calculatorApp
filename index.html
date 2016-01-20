@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link data-require="bootstrap@3.3.6" data-semver="3.3.6" rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.css" />
+  <link rel="stylesheet" href="style.css" />
+
+  <script data-require="bootstrap@3.3.6" data-semver="3.3.6" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.js"></script>
+  <script data-require="jquery@>=1.9.1 <3" data-semver="2.1.4" src="https://code.jquery.com/jquery-2.1.4.js"></script>
+
+</head>
+
+<body>
+  <h1 align="center">Calculator</h1>
+  <div class="container" id="calculator">
+    <div class="row-fluid">
+      <form name="keys" action="">
+        <!-- clear and display keys -->
+        <div>
+          <input type="button" class="btn btn-danger btn-lg btnSpace" value="C" onclick="clearDisplay()">
+          <input name="display" type="text" class="displayStyle">
+        </div>
+        <br/>
+        <div>
+          <!-- numbers and operator keys -->
+          <div>
+            <input type="button" class="btn btn-lg btnSpace" value="7" onclick="numSelected(7)">
+            <input type="button" class="btn btn-lg btnSpace" value="8" onclick="numSelected(8)">
+            <input type="button" class="btn btn-lg btnSpace" value="9" onclick="numSelected(9)">
+            <input type="button" class="btn btn-warning btn-lg btnSpace" value="x" onclick="opSelected('*')">
+          </div>
+          <br/>
+          <div>
+            <input type="button" class="btn btn-lg btnSpace" value="4" onclick="numSelected(4)">
+            <input type="button" class="btn btn-lg btnSpace" value="5" onclick="numSelected(5)">
+            <input type="button" class="btn btn-lg btnSpace" value="6" onclick="numSelected(6)">
+            <input type="button" class="btn btn-warning btn-lg btnSpace" value="-" onclick="opSelected('-')">
+          </div>
+          <br/>
+          <div>
+            <input type="button" class="btn btn-lg btnSpace" value="1" onclick="numSelected(1)">
+            <input type="button" class="btn btn-lg btnSpace" value="2" onclick="numSelected(2)">
+            <input type="button" class="btn btn-lg btnSpace" value="3" onclick="numSelected(3)">
+            <input type="button" class="btn btn-warning btn-lg btnSpace" value="+" onclick="opSelected('+')">
+          </div>
+          <br/>
+          <div>
+            <input type="button" class="btn btn-lg btnSpace" value="0" onclick="numSelected(0)">
+            <input type="button" class="btn btn-lg btnSpace" value="." onclick="decSelected()">
+            <input type="button" class="btn btn-success btn-lg btnSpace" value="=" onclick="opSelected('=')">
+            <input type="button" class="btn btn-warning btn-lg btnSpace" value="÷" onclick="opSelected('/')">
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+  <script src="calculator.js"></script>
+</body>
+
+</html>
